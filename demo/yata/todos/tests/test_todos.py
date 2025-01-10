@@ -10,7 +10,7 @@ pytest --headed --slowmo=1000 --browser firefox
 pytest --headed --slowmo=1000 --browser firefox --browser chromium
 
 pytest --tracing=on --browser firefox --browser chromium
-playwright show-trace test-results/todo-tests-test-todos-py-test-add-new-item-chromium/trace.zip
+playwright show-trace test-results/todos-tests-test-todos-py-test-create-todo-item-gets-rid-of-nothing-to-see-chromium/trace.zip
 
 vscode debugging
 breakpoint()
@@ -32,6 +32,7 @@ def test_display_empty_list_on_first_load(live_server, page: Page):
     url = reverse_url(live_server, "index")
 
     page.goto(url)
+
     page.wait_for_selector("text=Nothing to see")
 
 
