@@ -377,6 +377,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-primary: @apply orange-500;
+    --color-primary-dark: @apply orange-700;
   }
 }
 @layer base {
@@ -838,7 +840,7 @@
   .button {
     display: inline-block;
     border-radius: var(--radius-sm);
-    background-color: var(--color-orange-600);
+    background-color: var(--color-primary-dark);
     padding-inline: calc(var(--spacing) * 2);
     padding-block: calc(var(--spacing) * 1);
     vertical-align: middle;
@@ -851,7 +853,7 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-orange-500);
+        background-color: var(--color-primary);
       }
     }
     &:focus-visible {
@@ -866,7 +868,7 @@
       outline-offset: 2px;
     }
     &:focus-visible {
-      outline-color: var(--color-orange-600);
+      outline-color: var(--color-primary-dark);
     }
   }
   p {
